@@ -10,7 +10,7 @@
     <p>
       <strong>⚠️ Disclaimer:</strong><br />
       This project is not optimized for mobile devices.<br />
-      It is a demo version, and no real user data should be entered.
+      This demo does not collect accounts, emails, or passwords.
     </p>
 
     <hr />
@@ -19,11 +19,13 @@
     <ul>
       <li>Vue.js (Frontend)</li>
       <li>Bootstrap (Styling)</li>
-      <li>Express.js (Backend API)</li>
-      <li>MySQL (Database)</li>
       <li>TMDB API (Movie Data)</li>
-      <li>Railway (Deployment)</li>
+      <li>Netlify (Hosting)</li>
     </ul>
+    <p>
+      The repository still contains the original Express and MySQL membership code.
+      That code is not used on this public site, and no account data is stored.
+    </p>
 
     <hr />
 

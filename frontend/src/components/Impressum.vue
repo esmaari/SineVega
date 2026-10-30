@@ -16,14 +16,16 @@
     </p>
 
     <p>
-      Dies ist ein nicht-kommerzielles Demo-Projekt, das ausschließlich zu Lern- und Unterhaltungszwecken erstellt wurde.
+      Dies ist ein nicht-kommerzielles Demo-Projekt, das ausschließlich zu Lern- und Portfoliozwecken erstellt wurde.
+      Es werden keine Konten, E-Mail-Adressen oder Passwörter gespeichert.
     </p>
 
     <hr class="my-4" />
 
     <p>
       <strong>Note:</strong> This Impressum is provided in accordance with German legal requirements (§ 5 TMG).<br />
-      This is a personal, non-commercial portfolio project created for educational and demonstration purposes only.
+      This is a personal, non-commercial portfolio project created for learning and demonstration purposes only.
+      It does not collect accounts, email addresses, or passwords.
     </p>
 
     <p class="mt-4">
