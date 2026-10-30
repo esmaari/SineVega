@@ -33,7 +33,7 @@
             </div>
           </div>
           
-    <p v-else>MovieDetail PAGE Yükleniyor...</p>
+    <p v-else>Loading...</p>
   </section>
   
 </template>

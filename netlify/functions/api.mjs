@@ -9,7 +9,13 @@ function reply(body, status = 200) {
 }
 
 function requestPath(event) {
-  const pathname = new URL(event.rawUrl).pathname;
+  const raw = event.rawUrl || event.path || "";
+  let pathname = raw;
+  try {
+    pathname = new URL(raw, "https://sinevega.netlify.app").pathname;
+  } catch {
+    pathname = event.path || "";
+  }
   const marker = "/.netlify/functions/api/";
   if (pathname.includes(marker)) {
     return pathname.slice(pathname.indexOf(marker) + marker.length);
@@ -18,7 +24,7 @@ function requestPath(event) {
 }
 
 async function tmdb(path, params = {}) {
-  const apiKey = process.env.TMDB_API_KEY;
+  const apiKey = process.env.TMDB_API_KEY || process.env.VITE_TMDB_API_KEY;
   if (!apiKey) {
     const error = new Error("TMDB_API_KEY is not set");
     error.status = 500;
@@ -48,10 +54,9 @@ function isSafeId(value) {
 }
 
 export async function handler(event) {
+  try {
   const [resource, first, second] = requestPath(event).split("/").filter(Boolean);
   const query = event.queryStringParameters || {};
-
-  try {
     if (resource === "popular-movies") {
       const data = await tmdb("/movie/popular");
       return reply(data.results);
@@ -129,6 +134,10 @@ export async function handler(event) {
     return reply({ error: "Not found" }, 404);
   } catch (error) {
     console.error(error);
-    return reply({ message: "Internal Server Error" }, error.status || 500);
+    const missingKey = error.message === "TMDB_API_KEY is not set";
+    return reply(
+      { message: missingKey ? "TMDB_API_KEY is not set" : "Internal Server Error" },
+      error.status || 500
+    );
   }
 }

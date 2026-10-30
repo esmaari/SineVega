@@ -15,7 +15,7 @@
           />
       </div>
     </div>
-    <p v-else>Yükleniyor...</p>
+    <p v-else>Loading...</p>
   </div>
 
 </template>

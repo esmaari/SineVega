@@ -23,7 +23,7 @@
             </div>
       
             <div class="d-grid text-center">
-              <button class="btn bg-secondary-dark text-white" type="submit">Giriş Yap</button>
+              <button class="btn bg-secondary-dark text-white" type="submit">Log in</button>
               <p class="mt-4 text-danger" v-if="errorMessage">{{ errorMessage }}</p>
             </div>
 
