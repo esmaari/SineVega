@@ -36,7 +36,7 @@ const props = defineProps<{
   id: number;
 }>();
 
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL || "/api";
 const similarMovies = ref<Movie[]>([]); // 👈 burada tip tanımlandı
 
 const getSimilarMovies = async () => {

@@ -30,7 +30,7 @@ import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import TrailerCard from '../Cards/TrailerCard.vue';
 
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL || "/api";
 
 interface Trailer {
   id: number;

@@ -33,7 +33,7 @@
     poster_path: string;
   }
 
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = import.meta.env.VITE_API_URL || "/api";
   const movies = ref<Movie[]>([]);
 
   const fetchPopularMovies = async () => {

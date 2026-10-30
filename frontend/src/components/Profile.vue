@@ -8,7 +8,7 @@
           class="col-3 rounded-circle"
           style="width: 250px;"
         />
-      <h2 class="col-7 text-white pt-5">Hello, {{ userStore.username }}</h2>
+      <h2 class="col-7 text-white pt-5">Hello</h2>
       <div class="col-2 align-content-end">
         <button class="btn btn-secondary text-white" @click="deleteProfile">delete account</button>
       </div>

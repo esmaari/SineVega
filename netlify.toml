@@ -1,0 +1,17 @@
+[build]
+  command = "npm ci --prefix frontend && npm run build --prefix frontend"
+  publish = "frontend/dist"
+
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
