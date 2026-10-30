@@ -14,6 +14,13 @@
           </p>
 
           <small>© 2025 Cinema Name. All rights reserved.</small>
+          <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer" class="d-block mt-3">
+            <img src="/tmdb-logo.svg" alt="The Movie Database (TMDB)" class="tmdb-logo" />
+          </a>
+          <p class="text-muted small mb-0 mt-2">
+            This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.
+            It is for learning and portfolio use only.
+          </p>
         </div>
         <div class="col-7 d-flex justify-content-end gap-3">
           <router-link to="/about">About</router-link>
@@ -29,6 +36,11 @@
 
 <style scoped>
 .sv-footer {
-  height: 28vh;
+  min-height: 28vh;
+}
+
+.tmdb-logo {
+  height: 16px;
+  width: auto;
 }
 </style>
